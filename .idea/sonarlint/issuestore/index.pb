@@ -59,3 +59,5 @@ _app/src/main/java/hoods/com/newsy/features_components/core/data/remote/models/N
 fapp/src/main/java/hoods/com/newsy/features_components/headline/data/mapper/ArticleHeadlineDtoMapper.kt,e/1/e1168d9ad7ea1bd101e6198a6f504b371e3efca8
 –
 fapp/src/main/java/hoods/com/newsy/features_components/headline/domain/repository/HeadlineRepository.kt,a/c/acdd36047f5e915e13b2bee92c4452464210839a
+˜
+happ/src/main/java/hoods/com/newsy/features_components/headline/data/repository/HeadlineRepositoryImpl.kt,0/f/0ff08b1fb83b783fcac13a1486affd2bd50d638b
