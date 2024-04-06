@@ -1,4 +1,4 @@
-package hoods.com.newsy.ui.theme
+package hoods.com.newsy.features_presentations.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

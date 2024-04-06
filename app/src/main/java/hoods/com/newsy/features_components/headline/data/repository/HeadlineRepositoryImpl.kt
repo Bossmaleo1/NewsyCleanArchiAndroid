@@ -58,4 +58,5 @@ class HeadlineRepositoryImpl(
             id = newsyArticle.id
         )
     }
+
 }

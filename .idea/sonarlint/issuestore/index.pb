@@ -1,7 +1,5 @@
 
 c
-3app/src/main/java/hoods/com/newsy/models/Country.kt,d/8/d81a2a5042e684916aa7fabb5ea77bfc862d518d
-c
 3app/src/main/java/hoods/com/newsy/ui/theme/Theme.kt,5/4/548a96b93e54bc5e9010256b3968c540727dd833
 @
 build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d
@@ -39,10 +37,6 @@ Yapp/src/main/java/hoods/com/newsy/features_components/headline/data/remote/Head
 dapp/src/main/java/hoods/com/newsy/features_components/core/data/remote/local/NewsyArticleDatabase.kt,d/f/df441f51b5ad7c2e4062f5c94ce08b4ff6164ecc
 Ž
 ^app/src/main/java/hoods/com/newsy/features_components/headline/data/local/model/HeadlineDto.kt,3/b/3be66dbd00e548bde486c86df3af9fa1f2716004
-€
-Papp/src/main/java/hoods/com/newsy/features_components/headline/data/local/dao.kt,e/2/e28f56d8d5774b50cab55ecfa28af20b700bfa32
-ˆ
-Xapp/src/main/java/hoods/com/newsy/features_components/headline/data/local/HeadlineDao.kt,b/f/bf9ebb12de44dfa4a7aefe34253bc3f495830b58
 Œ
 \app/src/main/java/hoods/com/newsy/features_components/headline/data/mapper/HeadlineMapper.kt,9/6/96d4cde17c0848eeb90233a074c3c046348f1dcf
 ”
@@ -61,3 +55,13 @@ fapp/src/main/java/hoods/com/newsy/features_components/headline/data/mapper/Arti
 fapp/src/main/java/hoods/com/newsy/features_components/headline/domain/repository/HeadlineRepository.kt,a/c/acdd36047f5e915e13b2bee92c4452464210839a
 ˜
 happ/src/main/java/hoods/com/newsy/features_components/headline/data/repository/HeadlineRepositoryImpl.kt,0/f/0ff08b1fb83b783fcac13a1486affd2bd50d638b
+h
+8app/src/main/java/hoods/com/newsy/di/NewsyLocalModule.kt,4/c/4c39d88b7f6a3dc92a7cd7c3740b1fdb45f4ce64
+f
+6app/src/main/java/hoods/com/newsy/di/HeadlineModule.kt,9/1/910b0f87e5b8665ef5f0ca931ccb3865be503455
+Ÿ
+oapp/src/main/java/hoods/com/newsy/features_components/headline/domain/uses_cases/FetchHeadlineArticleUseCase.kt,4/e/4e1cdae94a2a91d0a22ab882cc121ffc304f17b7
+¢
+rapp/src/main/java/hoods/com/newsy/features_components/headline/domain/uses_cases/UpdateHeadlineFavouriteUseCase.kt,4/7/47b1fdb411d566609a116ce6c8fbfca1cc5f3d20
+”
+dapp/src/main/java/hoods/com/newsy/features_components/headline/domain/uses_cases/HeadlineUseCases.kt,1/4/14548997005fa2ea8d188c162e128a8135d7f1e6

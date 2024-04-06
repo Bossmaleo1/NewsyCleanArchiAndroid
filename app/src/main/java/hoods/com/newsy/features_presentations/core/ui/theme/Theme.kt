@@ -1,4 +1,4 @@
-package hoods.com.newsy.ui.theme
+package hoods.com.newsy.features_presentations.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
