@@ -10,7 +10,7 @@ data class NewsyArticle (
     override val title: String,
     override val url: String,
     override val urlToImage: String?,
-    override val favourite: Boolean,
+    override val favourite: Boolean = false,
     override val category: String,
     override var page: Int
 
