@@ -6,6 +6,7 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.core.data.remote.models.Article
+import hoods.com.newsy.features_components.core.data.remote.models.toHeadlineArticle
 import hoods.com.newsy.features_components.core.domain.mapper.Mapper
 import hoods.com.newsy.features_components.headline.data.local.model.HeadlineDto
 import hoods.com.newsy.features_components.headline.data.local.model.HeadlineRemoteKey
@@ -18,7 +19,6 @@ import java.util.concurrent.TimeUnit
 class HeadlineRemoteMediator(
     private val api: HeadlineApi,
     private val database: NewsyArticleDatabase,
-    private val articleHeadlineDtoMapper: Mapper<Article, HeadlineDto>,
     private val category: String = "",
     private val country: String = "",
     private val language: String = ""
@@ -90,9 +90,7 @@ class HeadlineRemoteMediator(
                     headlineRemoteKeyDao().insertAll(remoteKey = remotKeys)
                     headlineDao().insertHeadlineArticle(
                         articles = headlineArticles.map {
-                            articleHeadlineDtoMapper.toModel(
-                                it
-                            )
+                            it.toHeadlineArticle(page, category)
                         }
                     )
                 }
@@ -135,6 +133,5 @@ class HeadlineRemoteMediator(
             database.headlineRemoteKeyDao().getRemoteKeyByArticleId(article.url)
         }
     }
-
 
 }

@@ -56,8 +56,7 @@ object HeadlineModule {
         return HeadlineRepositoryImpl(
             headlineApi = api,
             database = database,
-            mapper = mapper,
-            articleHeadlineMapper = articleHeadlineMapper
+            mapper = mapper
         )
     }
 

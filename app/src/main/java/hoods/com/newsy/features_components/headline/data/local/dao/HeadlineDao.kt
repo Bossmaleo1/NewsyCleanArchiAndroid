@@ -14,10 +14,10 @@ import kotlinx.coroutines.flow.Flow
 interface HeadlineDao {
 
     @Query("SELECT * FROM headline_table")
-    fun getAllHeadlineArticles():PagingSource<Int,HeadlineDto>
+    fun getAllHeadlineArticles(): PagingSource<Int,HeadlineDto>
 
     @Query("SELECT * FROM headline_table WHERE id=:id")
-    fun getHeadlineArticle(id:Int):Flow<HeadlineDto>
+    fun getHeadlineArticle(id:Int): Flow<HeadlineDto>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertHeadlineArticle(articles: List<HeadlineDto>)

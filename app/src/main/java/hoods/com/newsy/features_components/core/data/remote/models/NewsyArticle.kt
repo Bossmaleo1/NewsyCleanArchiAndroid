@@ -13,5 +13,4 @@ data class NewsyArticle (
     override val favourite: Boolean = false,
     override val category: String,
     override var page: Int
-
 ): DomainContract()

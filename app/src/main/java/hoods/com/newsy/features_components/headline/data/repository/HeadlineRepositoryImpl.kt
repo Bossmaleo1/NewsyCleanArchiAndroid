@@ -20,8 +20,7 @@ import kotlinx.coroutines.flow.map
 class HeadlineRepositoryImpl(
     private val headlineApi: HeadlineApi,
     private val database: NewsyArticleDatabase,
-    private val mapper: Mapper<HeadlineDto, NewsyArticle>,
-    private val articleHeadlineMapper: Mapper<Article, HeadlineDto>
+    private val mapper: Mapper<HeadlineDto, NewsyArticle>
 ): HeadlineRepository {
     @OptIn(ExperimentalPagingApi::class)
     override fun fetchHeadlineArticle(
@@ -40,8 +39,7 @@ class HeadlineRepositoryImpl(
                 database = database,
                 category = category,
                 country = country,
-                language = language,
-                articleHeadlineDtoMapper = articleHeadlineMapper
+                language = language
             )
         ){
             database.headlineDao().getAllHeadlineArticles()
