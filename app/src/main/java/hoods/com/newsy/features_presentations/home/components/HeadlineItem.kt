@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -85,8 +86,7 @@ fun HeadlineItem(
     }
 
     Column(
-        modifier = Modifier.fillMaxSize(),
-
+        modifier = Modifier.fillMaxWidth(),
     ) {
         HorizontalPager(
             state = pagerState,
@@ -94,30 +94,34 @@ fun HeadlineItem(
             beyondBoundsPageCount = 0,
             pageSize = PageSize.Fill,
             pageSpacing = itemSpacing
-        ) {page ->
-
-            if(isAutoScrolling) {
-                AnimatedContent(targetState = page, label = "") { index ->
+        ) { page ->
+            if (isAutoScrolling) {
+                AnimatedContent(
+                    targetState = page,
+                    label = ""
+                ) { index ->
                     HeadlineCard(
                         modifier = Modifier,
                         article = articles[index],
                         onCardClick = onCardClick,
-                        onFavouriteChange = onFavouriteChange)
+                        onFavouriteChange = onFavouriteChange
+                    )
                 }
             } else {
-
                 HeadlineCard(
                     modifier = Modifier,
                     article = articles[page],
                     onCardClick = onCardClick,
-                    onFavouriteChange = onFavouriteChange)
-                Spacer(modifier = Modifier.size(2.dp))
-                TextButton(onClick = onViewMoreClick, modifier = Modifier.align(Alignment.End)) {
-                    Text("view More")
-                }
+                    onFavouriteChange = onFavouriteChange
+                )
             }
         }
+        Spacer(modifier = Modifier.size(2.dp))
+        TextButton(onClick = onViewMoreClick, modifier = Modifier.align(Alignment.End)) {
+            Text("view more")
+        }
     }
+
 
 }
 

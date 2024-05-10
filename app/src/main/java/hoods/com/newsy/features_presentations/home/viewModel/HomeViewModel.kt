@@ -23,6 +23,18 @@ class HomeViewModel @Inject constructor(
     var homeState by mutableStateOf(HomeState())
         private set
 
+    /*private val _result = mutableStateOf(0)
+    val result: State<Int> get() = _result
+
+    fun performComputation(input: Int) {
+        viewModelScope.launch(Dispatchers.Default) {  // Launching on Default dispatcher
+            val computedValue = heavyComputation(input)
+            withContext(Dispatchers.Main) {  // Switching back to Main for UI update
+                _result.value = computedValue
+            }
+        }
+    }*/
+
     init {
         loadArticles()
     }
@@ -79,7 +91,7 @@ class HomeViewModel @Inject constructor(
             selectedDiscoverCategory = homeUIEvents.category
         )
         // TODO:1 Remove category update since this is directly updated when saving
-        viewModelScope.launch {
+            viewModelScope.launch {
             discoverUseCases.updateCurrentCategoryUseCase(
                 homeState.selectedDiscoverCategory.category
             )
