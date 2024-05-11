@@ -217,3 +217,13 @@ Xapp/src/main/java/hoods/com/newsy/features_presentations/search/viewmodel/Searc
 Oapp/src/main/java/hoods/com/newsy/features_presentations/search/SearchScreen.kt,c/e/ce6e0efd49b328d4cbf176282c7e995b0d4129b8
 ž
 napp/src/main/java/hoods/com/newsy/features_components/detail/domain/use_cases/GetDetailSearchArticleUseCase.kt,2/c/2c418c817d435d15689e690e7afaff89ef2131b9
+
+Oapp/src/main/java/hoods/com/newsy/features_presentations/core/ui/theme/Color.kt,5/6/56befef72c2ce6f719593fc4ecaa765ea2a222dd
+
+Oapp/src/main/java/hoods/com/newsy/features_presentations/core/ui/theme/Theme.kt,6/5/65644820fa036ac820bbb5a434d505ebb5f3e7aa
+~
+Napp/src/main/java/hoods/com/newsy/features_presentations/core/ui/theme/Type.kt,0/2/0214afa2719e42448903f6bf5df0ddd660637935
+Š
+Zapp/src/main/java/hoods/com/newsy/features_presentations/core/navigation/NewsyAppDrawer.kt,2/f/2f55f720a56bf12822623fa78cdfe9d86af8a6b0
+y
+Iapp/src/main/java/hoods/com/newsy/features_presentations/core/NewsyApp.kt,4/5/459c503b952933322e375908605b1a3f20756c02
