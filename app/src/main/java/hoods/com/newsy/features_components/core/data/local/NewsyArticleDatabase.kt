@@ -2,6 +2,7 @@ package hoods.com.newsy.features_components.core.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import hoods.com.newsy.features_components.core.data.local.dao.SettingDao
 import hoods.com.newsy.features_components.detail.data.dao.DetailDao
 import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverArticleDAO
 import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverRemoteKeyDao
@@ -24,7 +25,8 @@ import hoods.com.newsy.features_components.search.data.local.models.SearchRemote
         DiscoverArticleDto::class,
         DiscoverKeys::class,
         SearchDto::class,
-        SearchRemoteKey::class
+        SearchRemoteKey::class,
+        SettingsDto::class
     ],
     exportSchema = false,
     version = 1
@@ -38,4 +40,5 @@ abstract class NewsyArticleDatabase : RoomDatabase() {
     abstract fun searchArticleDao(): SearchArticleDao
     abstract fun searchKeyDao(): SearchRemoteKeyDao
     abstract fun favouriteDao(): FavouriteDao
+    abstract fun settingDao(): SettingDao
 }

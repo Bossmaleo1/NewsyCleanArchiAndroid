@@ -13,6 +13,7 @@ import hoods.com.newsy.features_presentations.headline.HeadlineScreen
 import hoods.com.newsy.features_presentations.home.HomeScreen
 import hoods.com.newsy.features_presentations.search.SearchScreen
 import hoods.com.newsy.utils.K
+import hoods.com.newsy.features_presentations.setting.SettingScreen
 
 @Composable
 fun NewsyNavigationGraph(
@@ -115,6 +116,12 @@ fun NewsyNavigationGraph(
                 },
                 openDrawer = openDrawer
             )
+        }
+
+        composable(route = UiScreeen.SettingsScreen().route) {
+            SettingScreen {
+                navController.navigateUp()
+            }
         }
     }
 

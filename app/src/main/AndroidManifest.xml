@@ -13,13 +13,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_newsy_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Newsy"
+        android:theme="@style/Theme.SplashScreen.NewsySplash"
         tools:targetApi="31">
         <activity
             android:name=".features_presentations.core.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Newsy">
+            android:theme="@style/Theme.SplashScreen.NewsySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -9,7 +9,7 @@ import hoods.com.newsy.features_components.core.data.local.SettingsDto
 @Dao
 interface SettingDao {
 
-    @Query("SELECT * FROM search_table")
+    @Query("SELECT * FROM setting_table")
     suspend fun getSettings(): SettingsDto
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
