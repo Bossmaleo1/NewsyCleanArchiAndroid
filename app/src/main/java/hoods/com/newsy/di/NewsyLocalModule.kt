@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import javax.inject.Singleton
 
 @Module

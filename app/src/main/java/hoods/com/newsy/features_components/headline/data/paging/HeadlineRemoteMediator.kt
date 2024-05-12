@@ -4,7 +4,7 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.core.data.remote.models.Article
 import hoods.com.newsy.features_components.core.data.remote.models.toHeadlineArticle
 import hoods.com.newsy.features_components.core.domain.mapper.Mapper
@@ -12,6 +12,7 @@ import hoods.com.newsy.features_components.headline.data.local.model.HeadlineDto
 import hoods.com.newsy.features_components.headline.data.local.model.HeadlineRemoteKey
 import hoods.com.newsy.features_components.headline.data.mapper.ArticleHeadlineDtoMapper
 import hoods.com.newsy.features_components.headline.data.remote.HeadlineApi
+import hoods.com.newsy.utils.K
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
@@ -90,7 +91,7 @@ class HeadlineRemoteMediator(
                     headlineRemoteKeyDao().insertAll(remoteKey = remotKeys)
                     headlineDao().insertHeadlineArticle(
                         articles = headlineArticles.map {
-                            it.toHeadlineArticle(page, category)
+                            it.toHeadlineArticle(page, K.HEADLINE_CATEGORY)
                         }
                     )
                 }
@@ -107,7 +108,7 @@ class HeadlineRemoteMediator(
     private suspend fun getRemoteKeyForFirstItem(
         state: PagingState<Int, HeadlineDto>
     ): HeadlineRemoteKey? {
-        return state.pages.firstOrNull(){
+        return state.pages.firstOrNull {
             it.data.isNotEmpty()
         }?.data?.firstOrNull()?.let { article ->
             database.headlineRemoteKeyDao().getRemoteKeyByArticleId(article.url)
@@ -127,7 +128,7 @@ class HeadlineRemoteMediator(
     private suspend fun getRemoteKeyForLastItem(
         state: PagingState<Int, HeadlineDto>
     ): HeadlineRemoteKey? {
-        return state.pages.lastOrNull(){
+        return state.pages.lastOrNull {
             it.data.isNotEmpty()
         }?.data?.lastOrNull()?.let { article ->
             database.headlineRemoteKeyDao().getRemoteKeyByArticleId(article.url)

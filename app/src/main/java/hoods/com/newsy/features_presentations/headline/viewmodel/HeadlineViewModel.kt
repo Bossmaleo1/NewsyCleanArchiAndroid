@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_components.headline.domain.uses_cases.HeadlineUseCases
 import hoods.com.newsy.utils.Utils
 import kotlinx.coroutines.launch

@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -41,7 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_presentations.core.components.defaultPadding
 import hoods.com.newsy.features_presentations.core.components.itemSpacing
 import kotlinx.coroutines.delay

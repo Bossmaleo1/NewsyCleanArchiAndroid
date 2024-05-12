@@ -3,7 +3,6 @@ package hoods.com.newsy.features_presentations.headline
 import android.widget.Toast
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -16,14 +15,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_presentations.core.components.HeaderTitle
 import hoods.com.newsy.features_presentations.core.components.NewsyArticleItem
 import hoods.com.newsy.features_presentations.core.components.PaginationLoadingItem
 import hoods.com.newsy.features_presentations.core.components.itemSpacing
-import hoods.com.newsy.features_presentations.core.navigation.UiScreeen
 import hoods.com.newsy.features_presentations.headline.viewmodel.HeadlineViewModel
-import kotlinx.coroutines.CoroutineScope
 
 @Composable
 fun HeadlineScreen(

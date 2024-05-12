@@ -1,6 +1,5 @@
 package hoods.com.newsy.features_components.discover.data.remote
 
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
 import hoods.com.newsy.features_components.core.data.remote.models.NewsyRemoteDto
 import hoods.com.newsy.utils.K
 import retrofit2.http.GET

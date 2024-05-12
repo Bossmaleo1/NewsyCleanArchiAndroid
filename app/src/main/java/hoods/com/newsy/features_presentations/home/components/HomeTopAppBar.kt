@@ -1,7 +1,6 @@
 package hoods.com.newsy.features_presentations.home.components
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.consumedWindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search

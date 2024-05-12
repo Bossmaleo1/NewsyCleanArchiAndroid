@@ -1,6 +1,6 @@
-package hoods.com.newsy.features_components.core.data.remote.models
+package hoods.com.newsy.features_components.core.data.local
 
-abstract class DomainContract {
+abstract class LocalContractDto {
     abstract val id:Int
     abstract val author:String
     abstract val content: String

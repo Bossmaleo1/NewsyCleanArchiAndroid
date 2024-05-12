@@ -57,5 +57,5 @@ fun Article.toHeadlineArticle(page: Int, category: String): HeadlineDto {
 }
 
 private fun formatEmptyValue(value: String, default: String): String {
-    return value ?: "Unknown $default"
+    return value
 }

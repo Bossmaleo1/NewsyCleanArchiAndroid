@@ -5,7 +5,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.search.data.local.models.SearchDto
 import hoods.com.newsy.features_components.search.data.local.models.SearchRemoteKey
 import hoods.com.newsy.features_components.search.data.remote.SearchApi
@@ -99,7 +99,7 @@ class SearchRemoteMediator(
     private suspend fun getRemoteKeyForFirstItem(
         state: PagingState<Int, SearchDto>,
     ): SearchRemoteKey? {
-        return state.pages.firstOrNull() {
+        return state.pages.firstOrNull {
             it.data.isNotEmpty()
         }?.data?.firstOrNull()?.let { article ->
             database.searchKeyDao().getRemoteKeyArticleById(article.url)
@@ -119,7 +119,7 @@ class SearchRemoteMediator(
     private suspend fun getRemoteKeyForLastItem(
         state: PagingState<Int, SearchDto>,
     ): SearchRemoteKey? {
-        return state.pages.lastOrNull() {
+        return state.pages.lastOrNull {
             it.data.isNotEmpty()
         }?.data?.lastOrNull()?.let { article ->
             database.searchKeyDao().getRemoteKeyArticleById(article.url)

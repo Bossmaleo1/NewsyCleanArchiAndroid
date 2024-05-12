@@ -1,13 +1,11 @@
 package hoods.com.newsy.features_presentations.home
 
-import android.content.ClipData.Item
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.Newspaper
@@ -24,8 +22,8 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import hoods.com.newsy.features_components.core.data.remote.models.DomainContract
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.domain.models.DomainContract
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_presentations.core.components.HeaderTitle
 import hoods.com.newsy.features_presentations.core.components.NewsyArticleItem
 import hoods.com.newsy.features_presentations.core.components.PaginationLoadingItem

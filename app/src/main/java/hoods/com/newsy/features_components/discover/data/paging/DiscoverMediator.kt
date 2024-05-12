@@ -8,7 +8,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.core.data.remote.models.toDiscoverArticle
 import hoods.com.newsy.features_components.discover.data.local.models.DiscoverArticleDto
 import hoods.com.newsy.features_components.discover.data.local.models.DiscoverKeys
@@ -115,7 +115,7 @@ class DiscoverMediator(
     private suspend fun getRemoteKeyForFirstItem(
         state: PagingState<Int, DiscoverArticleDto>,
     ): DiscoverKeys? {
-        return state.pages.firstOrNull() {
+        return state.pages.firstOrNull {
             it.data.isNotEmpty()
         }?.data?.firstOrNull()?.let { article ->
             database.discoverRemoteKeyDao().getRemoteKeyByArticleId(article.url)
@@ -135,7 +135,7 @@ class DiscoverMediator(
     private suspend fun getRemoteKeyForLastItem(
         state: PagingState<Int, DiscoverArticleDto>,
     ): DiscoverKeys? {
-        return state.pages.lastOrNull() {
+        return state.pages.lastOrNull {
             it.data.isNotEmpty()
         }?.data?.lastOrNull()?.let { article ->
             database.discoverRemoteKeyDao().getRemoteKeyByArticleId(article.url)

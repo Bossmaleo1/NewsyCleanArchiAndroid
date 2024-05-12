@@ -5,8 +5,8 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_components.core.domain.mapper.Mapper
 import hoods.com.newsy.features_components.discover.data.local.models.DiscoverArticleDto
 import hoods.com.newsy.features_components.discover.data.paging.DiscoverMediator

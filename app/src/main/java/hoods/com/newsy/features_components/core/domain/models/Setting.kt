@@ -1,4 +1,4 @@
-package hoods.com.newsy.features_components.core.data.remote.models
+package hoods.com.newsy.features_components.core.domain.models
 
 data class Setting(
     val preferredCountryIndex: Int,

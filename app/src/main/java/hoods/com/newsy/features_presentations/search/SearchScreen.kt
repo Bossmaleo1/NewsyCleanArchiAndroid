@@ -37,12 +37,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import hoods.com.newsy.features_components.core.data.remote.models.DomainContract
+import hoods.com.newsy.features_components.core.domain.models.DomainContract
 import hoods.com.newsy.features_components.search.domain.models.SearchArticle
 import hoods.com.newsy.features_presentations.core.components.NewsyArticleItem
 import hoods.com.newsy.features_presentations.core.components.PaginationLoadingItem
 import hoods.com.newsy.features_presentations.core.components.defaultPadding
-import hoods.com.newsy.features_presentations.core.navigation.UiScreeen
 import hoods.com.newsy.features_presentations.search.viewmodel.SearchEvents
 import hoods.com.newsy.features_presentations.search.viewmodel.SearchViewModel
 

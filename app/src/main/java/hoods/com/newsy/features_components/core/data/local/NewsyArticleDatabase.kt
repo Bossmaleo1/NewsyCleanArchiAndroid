@@ -1,4 +1,4 @@
-package hoods.com.newsy.features_components.core.data.remote.local
+package hoods.com.newsy.features_components.core.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -7,6 +7,7 @@ import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverArtic
 import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverRemoteKeyDao
 import hoods.com.newsy.features_components.discover.data.local.models.DiscoverArticleDto
 import hoods.com.newsy.features_components.discover.data.local.models.DiscoverKeys
+import hoods.com.newsy.features_components.favourite.data.dao.FavouriteDao
 import hoods.com.newsy.features_components.headline.data.local.dao.HeadlineDao
 import hoods.com.newsy.features_components.headline.data.local.dao.HeadlineRemoteKeyDao
 import hoods.com.newsy.features_components.headline.data.local.model.HeadlineDto
@@ -35,6 +36,6 @@ abstract class NewsyArticleDatabase : RoomDatabase() {
     abstract fun discoverRemoteKeyDao(): DiscoverRemoteKeyDao
     abstract fun detailDao(): DetailDao
     abstract fun searchArticleDao(): SearchArticleDao
-
     abstract fun searchKeyDao(): SearchRemoteKeyDao
+    abstract fun favouriteDao(): FavouriteDao
 }

@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.detail.data.dao.DetailDao
 import hoods.com.newsy.features_components.detail.data.repository.DetailRepositoryImpl
 import hoods.com.newsy.features_components.detail.domain.repository.DetailRepository

@@ -28,7 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import hoods.com.newsy.R
-import hoods.com.newsy.features_components.core.data.remote.models.DomainContract
+import hoods.com.newsy.features_components.core.domain.models.DomainContract
 import hoods.com.newsy.utils.Utils
 
 @Composable

@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
 import hoods.com.newsy.features_components.core.domain.mapper.Mapper
 import hoods.com.newsy.features_components.search.data.local.models.SearchDto
 import hoods.com.newsy.features_components.search.data.mappers.SearchMapper

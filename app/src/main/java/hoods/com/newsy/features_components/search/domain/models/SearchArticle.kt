@@ -1,6 +1,6 @@
 package hoods.com.newsy.features_components.search.domain.models
 
-import hoods.com.newsy.features_components.core.data.remote.models.DomainContract
+import hoods.com.newsy.features_components.core.domain.models.DomainContract
 
 data class SearchArticle(
     override val id: Int,

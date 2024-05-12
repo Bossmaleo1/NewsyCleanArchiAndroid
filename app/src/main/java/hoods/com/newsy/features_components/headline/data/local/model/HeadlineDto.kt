@@ -3,7 +3,7 @@ package hoods.com.newsy.features_components.headline.data.local.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import hoods.com.newsy.features_components.core.data.remote.local.LocalContractDto
+import hoods.com.newsy.features_components.core.data.local.LocalContractDto
 
 @Entity(tableName = "headline_table")
 data class HeadlineDto(
@@ -23,4 +23,4 @@ data class HeadlineDto(
     override val category: String,
     override var page: Int
 
-):LocalContractDto()
+): LocalContractDto()

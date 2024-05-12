@@ -5,8 +5,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import hoods.com.newsy.features_components.core.data.remote.local.NewsyArticleDatabase
-import hoods.com.newsy.features_components.core.data.remote.models.NewsyArticle
+import hoods.com.newsy.features_components.core.data.local.NewsyArticleDatabase
+import hoods.com.newsy.features_components.core.domain.models.NewsyArticle
 import hoods.com.newsy.features_components.core.domain.mapper.Mapper
 import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverArticleDAO
 import hoods.com.newsy.features_components.discover.data.local.dao.DiscoverRemoteKeyDao
@@ -26,7 +26,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
